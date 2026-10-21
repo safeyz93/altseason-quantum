@@ -7,11 +7,11 @@ export function Story() {
     <section
       id="story"
       aria-labelledby="story-heading"
-      className="relative scroll-mt-20 border-y-[3px] border-ink bg-ice px-4 py-16 text-ink sm:px-6 lg:px-8 lg:py-24"
+      className="relative scroll-mt-20 border-y-[3px] border-ink bg-paper px-4 py-16 text-ink sm:px-6 lg:px-8 lg:py-24"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(#01003f_1px,transparent_1px)] [background-size:26px_26px]"
+        className="pointer-events-none absolute inset-0 opacity-[0.16] [background-image:radial-gradient(#000000_1px,transparent_1px)] [background-size:26px_26px]"
       />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
@@ -44,14 +44,14 @@ export function Story() {
 
         <div className="flex flex-col justify-start gap-5">
           <figure className="rotate-2 border-2 border-ink bg-paper p-3 shadow-hard">
-            <div className="flex aspect-[4/5] items-center justify-center bg-ice px-4">
+            <div className="flex aspect-[4/5] items-center justify-center bg-sky px-4">
               <Image
                 src={backgroundStickers[3].src}
                 alt={backgroundStickers[3].alt}
                 width={backgroundStickers[3].width}
                 height={backgroundStickers[3].height}
                 sizes="(min-width: 1024px) 30vw, 80vw"
-                className="h-4/5 w-auto object-contain drop-shadow-[0_14px_0_rgba(1,0,63,0.18)]"
+                className="h-4/5 w-auto object-contain drop-shadow-[0_14px_0_rgba(15,98,146,0.18)]"
               />
             </div>
             <figcaption className="mt-3 flex items-center justify-between gap-2 border-t-2 border-ink pt-2 font-mono text-[10px] uppercase tracking-[0.14em]">

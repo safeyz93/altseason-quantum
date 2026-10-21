@@ -32,7 +32,7 @@ export function Roadmap() {
             <br />
             <span className="text-neon">a plan.</span>
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-ice/75">
+          <p className="mt-4 text-sm leading-relaxed text-paper/80">
             Four phases, zero price targets. This is a meme project run by the
             people in the group chat — so the roadmap tracks what the colony
             ships, not what the chart does.
@@ -48,7 +48,7 @@ export function Roadmap() {
                 className={cn(
                   "relative flex flex-col border-2 p-5 sm:p-6",
                   isActive
-                    ? "border-ink bg-ink text-paper shadow-[8px_8px_0_0_#c0fefc]"
+                    ? "border-ink bg-ink text-paper shadow-[8px_8px_0_0_#16ff00]"
                     : "border-ink bg-paper text-ink shadow-hard",
                 )}
               >
@@ -57,7 +57,7 @@ export function Roadmap() {
                     <p
                       className={cn(
                         "font-mono text-[10px] uppercase tracking-[0.24em]",
-                        isActive ? "text-ice/60" : "text-ink/50",
+                        isActive ? "text-paper/55" : "text-ink/50",
                       )}
                     >
                       Phase {phase.phase}
@@ -88,7 +88,7 @@ export function Roadmap() {
                 <p
                   className={cn(
                     "mt-3 text-sm leading-relaxed",
-                    isActive ? "text-ice/75" : "text-ink/70",
+                    isActive ? "text-paper/80" : "text-ink/70",
                   )}
                 >
                   {phase.summary}
@@ -124,7 +124,7 @@ export function Roadmap() {
           })}
         </ol>
 
-        <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.18em] text-ice/35">
+        <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.18em] text-paper/45">
           Status is updated by the colony. No phase promises a price or a return.
         </p>
       </div>

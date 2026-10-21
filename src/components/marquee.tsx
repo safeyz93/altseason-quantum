@@ -8,7 +8,7 @@ type MarqueeProps = {
 };
 
 const tones = {
-  ink: "border-ink bg-ink text-ice",
+  ink: "border-sky bg-ink text-ice",
   ice: "border-ink bg-ice text-ink",
   neon: "border-ink bg-neon text-ink",
 } as const;

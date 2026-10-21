@@ -21,16 +21,18 @@ Everything sits in `src/lib/content.ts`:
 
 ## Design system
 
-Palette supplied by the user (`#04009A`, `#77ACF1`, `#3EDBF0`, `#C0FEFC`), mapped to roles in `src/app/globals.css` `@theme`:
+Palette supplied by the user (`#000000`, `#0F6292`, `#16FF00`, `#FFED00`), mapped to roles in `src/app/globals.css` `@theme`:
 
 | Token | Hex | Role |
 | --- | --- | --- |
-| `--color-abyss` | `#04009A` | page background |
-| `--color-ink` | `#01003F` | text on light, borders, hard shadows |
-| `--color-paper` | `#F2FEFF` | light text / card surface |
-| `--color-ice` | `#C0FEFC` | primary CTA, light sections |
-| `--color-sky` | `#77ACF1` | secondary accent |
-| `--color-neon` | `#3EDBF0` | live/active accents |
+| `--color-abyss` | `#000000` | page background |
+| `--color-ink` | `#000000` | text on light, borders |
+| `--color-paper` | `#F4F8F2` | light text / card surface |
+| `--color-sky` | `#0F6292` | gallery tiles, stat cells, blue cards, hairline borders, hard shadows |
+| `--color-ice` | `#16FF00` | primary CTA, ticker band, live accents |
+| `--color-neon` | `#FFED00` | headline accent, active/soon badges |
+
+Hard shadows use `#0F6292` so they read on black; the active roadmap phase uses the green `--shadow-hard-ice`.
 
 Fonts: Anton (display), Space Grotesk (body), JetBrains Mono (data) via `next/font`.
 

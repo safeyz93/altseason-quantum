@@ -7,7 +7,7 @@ export function HowToBuy() {
     <section
       id="how-to-buy"
       aria-labelledby="buy-heading"
-      className="relative scroll-mt-20 border-y-2 border-ink/60 bg-abyss px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+      className="relative scroll-mt-20 border-y-2 border-sky/40 bg-abyss px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-start">
@@ -21,7 +21,7 @@ export function HowToBuy() {
               <br />
               <span className="text-neon">into your wallet.</span>
             </h2>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-ice/75">
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-paper/80">
               No presale, no whitelist, no secret link. You need a wallet, some
               SOL, and the exact contract address. Everything else is the same
               as any other Solana swap.
@@ -38,7 +38,7 @@ export function HowToBuy() {
               >
                 !
               </span>
-              <p className="text-[12px] leading-relaxed text-ice/80">
+              <p className="text-[12px] leading-relaxed text-paper/85">
                 Always verify the contract address before you trade. Lookalike
                 tokens copy the name and the art — they cannot copy the address.
                 If a link asks for your seed phrase, it is not the colony.
@@ -76,7 +76,7 @@ export function HowToBuy() {
           </ol>
         </div>
 
-        <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.18em] text-ice/35">
+        <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.18em] text-paper/45">
           Contract {token.contract.slice(0, 8)}…{token.contract.slice(-6)} ·{" "}
           {token.chain} · {token.launchpad}
         </p>

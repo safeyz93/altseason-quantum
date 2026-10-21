@@ -114,7 +114,7 @@ export function VideoSplash() {
           <span className="text-neon">Quantum</span>
         </h1>
 
-        <p className="mt-5 max-w-xl text-sm leading-relaxed text-ice/85 sm:text-base">
+        <p className="mt-5 max-w-xl text-sm leading-relaxed text-paper/85 sm:text-base">
           One tabby swallowed a green capsule and came back with the timeline
           where the charts never close. {token.ticker} is the proof. The colony
           is the witness.
@@ -125,7 +125,7 @@ export function VideoSplash() {
             ref={enterRef}
             type="button"
             onClick={dismiss}
-            className="inline-flex items-center gap-2 border-2 border-ink bg-ice px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-ink shadow-[4px_4px_0_0_#c0fefc] transition-transform duration-100 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-paper"
+            className="inline-flex items-center gap-2 border-2 border-ink bg-ice px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-ink shadow-[4px_4px_0_0_#ffed00] transition-transform duration-100 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-paper"
           >
             Enter the timeline
             <span aria-hidden="true">→</span>
@@ -139,7 +139,7 @@ export function VideoSplash() {
           </button>
         </div>
 
-        <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-ice/45">
+        <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-paper/45">
           No audio · skip anytime · Esc to close
         </p>
       </div>

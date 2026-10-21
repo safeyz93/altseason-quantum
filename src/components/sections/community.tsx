@@ -22,23 +22,23 @@ export function Community() {
             <br />
             <span className="text-neon">in the group chat.</span>
           </h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-ice/75">
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-paper/80">
             {community.body}
           </p>
 
-          <dl className="mt-8 grid grid-cols-3 gap-px border-2 border-ice/25 bg-ice/20">
+          <dl className="mt-8 grid grid-cols-3 gap-px border-2 border-sky/60 bg-abyss">
             {community.stats.map((stat) => (
-              <div key={stat.label} className="bg-abyss px-3 py-4">
+              <div key={stat.label} className="bg-sky px-3 py-4">
                 <dd className="font-display text-2xl leading-none text-paper sm:text-3xl">
                   {stat.value}
                 </dd>
-                <dt className="mt-2 font-mono text-[9px] uppercase tracking-[0.16em] text-ice/55">
+                <dt className="mt-2 font-mono text-[9px] uppercase tracking-[0.16em] text-paper/60">
                   {stat.label}
                 </dt>
               </div>
             ))}
           </dl>
-          <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.16em] text-ice/35">
+          <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.16em] text-paper/45">
             {demoNote}
           </p>
         </div>
@@ -78,7 +78,7 @@ export function Community() {
                 ) : (
                   <div
                     className={cn(
-                      "flex items-center justify-between gap-4 border-2 border-ice/20 bg-ink p-4 sm:p-5",
+                      "flex items-center justify-between gap-4 border-2 border-ice/20 bg-sky p-4 sm:p-5",
                       isSoon && "opacity-85",
                     )}
                   >
@@ -101,7 +101,7 @@ export function Community() {
                         <span className="block font-display text-lg uppercase leading-none text-paper">
                           {channel.label}
                         </span>
-                        <span className="mt-1 block truncate font-mono text-[11px] tracking-[0.04em] text-ice/55">
+                        <span className="mt-1 block truncate font-mono text-[11px] tracking-[0.04em] text-paper/60">
                           {channel.handle} · {channel.note}
                         </span>
                       </span>
@@ -120,9 +120,9 @@ export function Community() {
           })}
 
           <li className="mt-2 flex flex-wrap items-center justify-between gap-3 border-2 border-dashed border-ice/25 p-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ice/50">
+            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-paper/55">
               Full address:{" "}
-              <span className="break-all text-ice/80">{token.contract}</span>
+              <span className="break-all text-paper/85">{token.contract}</span>
             </p>
           </li>
         </ul>

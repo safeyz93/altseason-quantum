@@ -93,7 +93,7 @@ export function GallerySection() {
     <section
       id="vault"
       aria-labelledby="vault-heading"
-      className="relative scroll-mt-20 border-t-2 border-ink/60 bg-abyss px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+      className="relative scroll-mt-20 border-t-2 border-sky/40 bg-abyss px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -107,7 +107,7 @@ export function GallerySection() {
               <br />
               <span className="text-neon">left a sticker.</span>
             </h2>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-ice/75">
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-paper/80">
               QZZ came back with proof. Some variants are cats, some are
               cosplay, and three are clearly a glitch in the simulation. Click
               any sticker to inspect it.
@@ -131,7 +131,7 @@ export function GallerySection() {
                     "border-2 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.16em] transition-colors",
                     isActive
                       ? "border-ink bg-ice text-ink shadow-hard-sm"
-                      : "border-ice/30 text-ice/70 hover:border-ice hover:text-paper",
+                      : "border-paper/25 text-paper/70 hover:border-ice hover:text-paper",
                   )}
                 >
                   {item.label}
@@ -141,7 +141,7 @@ export function GallerySection() {
           </div>
         </div>
 
-        <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-ice/45">
+        <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-paper/50">
           Showing {items.length} of {galleryItems.length} stickers
         </p>
 
@@ -157,7 +157,7 @@ export function GallerySection() {
                 aria-label={`Open sticker: ${item.label}`}
                 className="group flex h-full w-full flex-col border-2 border-ink bg-ink text-left shadow-hard-sm transition-[transform,box-shadow] duration-100 hover:-translate-y-1 hover:shadow-hard focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-ice"
               >
-                <span className="relative flex aspect-[4/5] w-full items-center justify-center bg-ice/95 px-2 pt-2">
+                <span className="relative flex aspect-[4/5] w-full items-center justify-center bg-sky px-2 pt-2">
                   <Image
                     src={item.src}
                     alt={item.alt}
@@ -193,13 +193,13 @@ export function GallerySection() {
           aria-label={`Sticker viewer: ${active.label}`}
           className="fixed inset-0 z-[80] flex items-center justify-center bg-ink/95 p-4 backdrop-blur-sm"
         >
-          <div className="relative flex w-full max-w-2xl flex-col border-2 border-ice/40 bg-ink shadow-[10px_10px_0_0_rgba(62,219,240,0.35)]">
+          <div className="relative flex w-full max-w-2xl flex-col border-2 border-ice/40 bg-ink shadow-[10px_10px_0_0_rgba(22,255,0,0.35)]">
             <div className="flex items-center justify-between gap-3 border-b-2 border-ice/25 px-4 py-3">
               <div className="min-w-0">
                 <p className="truncate font-display text-lg uppercase leading-none text-paper">
                   {active.label}
                 </p>
-                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-ice/60">
+                <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-paper/55">
                   {active.id} · {active.category === "dog" ? "glitch variant" : active.category}
                 </p>
               </div>
@@ -213,14 +213,14 @@ export function GallerySection() {
               </button>
             </div>
 
-            <div className="flex items-center justify-center bg-ice px-3 py-4 sm:py-6">
+            <div className="flex items-center justify-center bg-sky px-3 py-4 sm:py-6">
               <Image
                 src={active.src}
                 alt={active.alt}
                 width={active.width}
                 height={active.height}
                 sizes="90vw"
-                className="h-auto max-h-[52vh] w-full max-w-[400px] object-contain drop-shadow-[0_16px_0_rgba(1,0,63,0.22)]"
+                className="h-auto max-h-[52vh] w-full max-w-[400px] object-contain drop-shadow-[0_16px_0_rgba(15,98,146,0.22)]"
               />
             </div>
 
@@ -232,7 +232,7 @@ export function GallerySection() {
               >
                 ← Prev
               </button>
-              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ice/55">
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-paper/55">
                 {(openIndex ?? 0) + 1} / {items.length}
               </p>
               <button

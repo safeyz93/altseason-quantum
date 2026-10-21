@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* Palette supplied by the user: #04009A / #77ACF1 / #3EDBF0 / #C0FEFC,
-     mapped to roles. Two neutrals (ink, paper) were added for contrast. */
-  --color-abyss: #04009a;
-  --color-ink: #01003f;
-  --color-paper: #f2feff;
-  --color-ice: #c0fefc;
-  --color-sky: #77acf1;
-  --color-neon: #3edbf0;
+  /* Palette supplied by the user: #000000 / #0F6292 / #16FF00 / #FFED00,
+     mapped to roles. Two neutrals (ink, paper) support contrast on light surfaces. */
+  --color-abyss: #000000;
+  --color-ink: #000000;
+  --color-paper: #f4f8f2;
+  --color-ice: #16ff00;
+  --color-sky: #0f6292;
+  --color-neon: #ffed00;
 
   --font-display: var(--font-anton), "Arial Narrow", Impact, sans-serif;
   --font-body: var(--font-grotesk), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 
-  --shadow-hard: 6px 6px 0 0 #01003f;
-  --shadow-hard-sm: 3px 3px 0 0 #01003f;
-  --shadow-hard-lg: 10px 10px 0 0 #01003f;
-  --shadow-hard-ice: 6px 6px 0 0 #c0fefc;
+  --shadow-hard: 6px 6px 0 0 #0f6292;
+  --shadow-hard-sm: 3px 3px 0 0 #0f6292;
+  --shadow-hard-lg: 10px 10px 0 0 #0f6292;
+  --shadow-hard-ice: 8px 8px 0 0 #16ff00;
 
   --animate-marquee: marquee 34s linear infinite;
   --animate-marquee-slow: marquee 48s linear infinite;
@@ -73,18 +73,18 @@
 
 @utility grid-field {
   background-image:
-    linear-gradient(to right, rgb(192 254 252 / 0.09) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(192 254 252 / 0.09) 1px, transparent 1px);
+    linear-gradient(to right, rgb(22 255 0 / 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(22 255 0 / 0.10) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
 @utility dot-field {
-  background-image: radial-gradient(rgb(192 254 252 / 0.18) 1px, transparent 1px);
+  background-image: radial-gradient(rgb(22 255 0 / 0.16) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
 @utility sticker-shadow {
-  filter: drop-shadow(0 10px 0 rgb(1 0 63 / 0.28));
+  filter: drop-shadow(0 10px 0 rgb(15 98 146 / 0.45));
 }
 
 @utility mask-fade-x {

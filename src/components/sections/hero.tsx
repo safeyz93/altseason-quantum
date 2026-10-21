@@ -13,24 +13,24 @@ export function Hero() {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(4,0,154,0.86)_0%,rgba(4,0,154,0.6)_42%,rgba(4,0,154,0.92)_100%)] lg:bg-[linear-gradient(90deg,rgba(4,0,154,0.96)_0%,rgba(4,0,154,0.88)_34%,rgba(4,0,154,0.25)_62%,rgba(4,0,154,0)_100%)]"
+        className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.86)_0%,rgba(0,0,0,0.6)_42%,rgba(0,0,0,0.92)_100%)] lg:bg-[linear-gradient(90deg,rgba(0,0,0,0.96)_0%,rgba(0,0,0,0.88)_34%,rgba(0,0,0,0.25)_62%,rgba(0,0,0,0)_100%)]"
       />
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-10">
         <div className="relative z-10 min-w-0">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -inset-x-10 -inset-y-12 -z-10 bg-[radial-gradient(ellipse_at_left,rgba(4,0,154,1)_0%,rgba(4,0,154,0.98)_52%,rgba(4,0,154,0.88)_70%,rgba(4,0,154,0.45)_86%,rgba(4,0,154,0)_100%)] lg:-inset-x-24"
+            className="pointer-events-none absolute -inset-x-10 -inset-y-12 -z-10 bg-[radial-gradient(ellipse_at_left,rgba(0,0,0,1)_0%,rgba(0,0,0,0.98)_52%,rgba(0,0,0,0.88)_70%,rgba(0,0,0,0.45)_86%,rgba(0,0,0,0)_100%)] lg:-inset-x-24"
           />
           <div className="flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 border-2 border-ice/50 px-2.5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-ice">
               <span className="inline-block h-1.5 w-1.5 bg-neon" />
               {token.chain}
             </span>
-            <span className="border-2 border-ice/25 px-2.5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-ice/70">
+            <span className="border-2 border-ice/25 px-2.5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-paper/65">
               {token.launchpad}
             </span>
-            <span className="border-2 border-ice/25 px-2.5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-ice/70">
+            <span className="border-2 border-ice/25 px-2.5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-paper/65">
               Community-run
             </span>
           </div>
@@ -46,7 +46,7 @@ export function Hero() {
             {hero.headline[2]}
           </h1>
 
-          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-ice/80 sm:text-base">
+          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-paper/80 sm:text-base">
             {hero.subhead}
           </p>
 
@@ -55,7 +55,7 @@ export function Hero() {
               href={hero.primaryCta.href}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 border-2 border-ink bg-ice px-6 py-3.5 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-ink shadow-[4px_4px_0_0_#c0fefc] transition-transform duration-100 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none"
+              className="inline-flex items-center gap-2 border-2 border-ink bg-ice px-6 py-3.5 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-ink shadow-[4px_4px_0_0_#ffed00] transition-transform duration-100 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none"
             >
               <TelegramIcon className="h-4 w-4" />
               {hero.primaryCta.label}
@@ -63,10 +63,10 @@ export function Hero() {
             <CopyContract variant="button" />
           </div>
 
-          <dl className="mt-9 grid grid-cols-2 gap-px overflow-hidden border-2 border-ice/25 bg-ice/20 sm:grid-cols-4">
+          <dl className="mt-9 grid grid-cols-2 gap-px overflow-hidden border-2 border-sky/60 bg-sky/70 sm:grid-cols-4">
             {heroStats.map((stat) => (
               <div key={stat.label} className="bg-abyss px-3 py-3">
-                <dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-ice/55">
+                <dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-paper/60">
                   {stat.label}
                 </dt>
                 <dd className="mt-1 font-display text-xl text-paper">{stat.value}</dd>
@@ -74,9 +74,9 @@ export function Hero() {
             ))}
           </dl>
 
-          <p className="mt-3 font-mono text-[10px] leading-relaxed text-ice/55">
+          <p className="mt-3 font-mono text-[10px] leading-relaxed text-paper/50">
             * {demoNote} Contract:{" "}
-            <span className="text-ice/80">
+            <span className="text-paper/85">
               {token.contract.slice(0, 6)}…{token.contract.slice(-4)}
             </span>{" "}
             on {token.chain}.
@@ -92,7 +92,7 @@ export function Hero() {
               height={heroPill.height}
               priority
               sizes="(min-width: 1024px) 112vw, 94vw"
-              className="mx-auto h-auto w-full max-w-[520px] rotate-[16deg] drop-shadow-[0_32px_0_rgba(1,0,63,0.4)] sm:max-w-[640px] lg:w-[clamp(1200px,110vw,1600px)] lg:max-w-none lg:-translate-x-[42%] lg:rotate-[18deg]"
+              className="mx-auto h-auto w-full max-w-[520px] rotate-[16deg] drop-shadow-[0_32px_0_rgba(15,98,146,0.4)] sm:max-w-[640px] lg:w-[clamp(1200px,110vw,1600px)] lg:max-w-none lg:-translate-x-[42%] lg:rotate-[18deg]"
             />
 
             <div className="absolute -left-[8%] top-[-10%] w-[clamp(120px,42vw,310px)] -rotate-12 lg:left-0 lg:top-[2%] lg:w-[clamp(160px,26vw,310px)]">
@@ -102,7 +102,7 @@ export function Hero() {
                 width={backgroundStickers[3].width}
                 height={backgroundStickers[3].height}
                 sizes="310px"
-                className="h-auto w-full drop-shadow-[0_14px_0_rgba(1,0,63,0.35)]"
+                className="h-auto w-full drop-shadow-[0_14px_0_rgba(15,98,146,0.35)]"
               />
             </div>
 
@@ -113,7 +113,7 @@ export function Hero() {
                 width={backgroundStickers[0].width}
                 height={backgroundStickers[0].height}
                 sizes="290px"
-                className="h-auto w-full drop-shadow-[0_14px_0_rgba(1,0,63,0.35)]"
+                className="h-auto w-full drop-shadow-[0_14px_0_rgba(15,98,146,0.35)]"
               />
             </div>
           </div>

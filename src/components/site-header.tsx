@@ -4,7 +4,7 @@ import { navLinks, token } from "@/lib/content";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b-2 border-ink/70 bg-abyss/95 backdrop-blur-[2px]">
+    <header className="sticky top-0 z-40 border-b-2 border-sky/70 bg-abyss/95 backdrop-blur-[2px]">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <Link
           href="#top"
@@ -26,7 +26,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-ice/75 transition-colors hover:text-paper focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-ice"
+              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-paper/70 transition-colors hover:text-ice focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-ice"
             >
               {link.label}
             </a>

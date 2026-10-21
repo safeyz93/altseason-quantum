@@ -10,7 +10,7 @@ export const btnPrimary = cn(
 
 export const btnOnDark = cn(
   btnBase,
-  "bg-transparent text-paper shadow-[3px_3px_0_0_#c0fefc] hover:-translate-y-0.5 hover:bg-paper hover:text-ink",
+  "bg-transparent text-paper shadow-[3px_3px_0_0_#ffed00] hover:-translate-y-0.5 hover:bg-paper hover:text-ink",
 );
 
 export const cardClass =

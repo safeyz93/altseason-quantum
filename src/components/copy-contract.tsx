@@ -53,7 +53,7 @@ export function CopyContract({ variant = "compact", className }: CopyContractPro
     return (
       <div
         className={cn(
-          "flex flex-col gap-3 border-2 border-ink bg-ink p-4 text-paper sm:flex-row sm:items-center sm:justify-between",
+          "flex flex-col gap-3 border-2 border-ice/30 bg-ink p-4 text-paper sm:flex-row sm:items-center sm:justify-between",
           className,
         )}
       >
@@ -85,7 +85,7 @@ export function CopyContract({ variant = "compact", className }: CopyContractPro
         type="button"
         onClick={handleCopy}
         className={cn(
-          "inline-flex items-center justify-center gap-2 border-2 border-ink bg-paper px-5 py-3 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-ink shadow-[3px_3px_0_0_#c0fefc] transition-[transform,box-shadow] duration-100 hover:-translate-y-0.5 hover:shadow-hard active:translate-y-1 active:shadow-none",
+          "inline-flex items-center justify-center gap-2 border-2 border-ink bg-paper px-5 py-3 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-ink shadow-[3px_3px_0_0_#16ff00] transition-[transform,box-shadow] duration-100 hover:-translate-y-0.5 hover:shadow-hard active:translate-y-1 active:shadow-none",
           className,
         )}
       >
