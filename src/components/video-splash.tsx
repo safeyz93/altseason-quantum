@@ -96,7 +96,6 @@ export function VideoSplash() {
         poster={videoSplash.poster}
         autoPlay={!reduced}
         muted
-        loop
         playsInline
         preload="auto"
         aria-hidden="true"
