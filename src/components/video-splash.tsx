@@ -140,19 +140,8 @@ export function VideoSplash() {
             Enter the timeline
             <span aria-hidden="true">→</span>
           </button>
-          <button
-            type="button"
-            data-splash-dismiss="skip"
-            onClick={dismiss}
-            className="inline-flex items-center border-2 border-ice/40 px-5 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-ice transition-colors hover:border-ice hover:bg-ice hover:text-ink focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-paper"
-          >
-            Skip intro
-          </button>
         </div>
 
-        <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-paper/45">
-          No audio · skip anytime · Esc to close
-        </p>
       </div>
 
       {/* Progressive-enhancement fallback: the splash must always be dismissible,
