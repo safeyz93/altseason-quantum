@@ -1,0 +1,17 @@
+# dependencies / builds
+node_modules/
+.next/
+out/
+.npm-cache/
+
+# local QA artifacts
+_qa/
+*.log
+
+# env
+.env*
+!.env.example
+
+# os
+.DS_Store
+Thumbs.db
