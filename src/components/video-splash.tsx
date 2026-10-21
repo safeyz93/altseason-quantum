@@ -135,7 +135,7 @@ export function VideoSplash() {
             type="button"
             data-splash-dismiss="enter"
             onClick={dismiss}
-            className="inline-flex items-center gap-2 border-2 border-ink bg-ice px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-ink shadow-[4px_4px_0_0_#ffed00] transition-transform duration-100 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-paper"
+            className="inline-flex items-center gap-2 border-2 border-ink bg-ice px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-ink shadow-[4px_4px_0_0_#ffd51e] transition-transform duration-100 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-paper"
           >
             Enter the timeline
             <span aria-hidden="true">→</span>

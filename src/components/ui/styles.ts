@@ -10,14 +10,14 @@ export const btnPrimary = cn(
 
 export const btnOnDark = cn(
   btnBase,
-  "bg-transparent text-paper shadow-[3px_3px_0_0_#ffed00] hover:-translate-y-0.5 hover:bg-paper hover:text-ink",
+  "bg-transparent text-paper shadow-[3px_3px_0_0_#ffd51e] hover:-translate-y-0.5 hover:bg-paper hover:text-ink",
 );
 
 export const cardClass =
   "border-2 border-ink bg-paper text-ink shadow-hard";
 
 export const kickerClass =
-  "font-mono text-[10px] font-bold uppercase tracking-[0.28em] text-ice";
+  "font-mono text-[10px] font-bold uppercase tracking-[0.28em] text-neon";
 
 export const displayClass =
   "font-display uppercase leading-[0.86] tracking-[-0.01em] text-paper";

@@ -48,7 +48,7 @@ export function Roadmap() {
                 className={cn(
                   "relative flex flex-col border-2 p-5 sm:p-6",
                   isActive
-                    ? "border-ink bg-ink text-paper shadow-[8px_8px_0_0_#16ff00]"
+                    ? "border-ink bg-ink text-paper shadow-[8px_8px_0_0_#ffd51e]"
                     : "border-ink bg-paper text-ink shadow-hard",
                 )}
               >

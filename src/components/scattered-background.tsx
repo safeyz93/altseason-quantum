@@ -60,7 +60,7 @@ export function ScatteredBackground() {
       className="pointer-events-none absolute inset-0 z-0 select-none overflow-hidden"
     >
       <div className="absolute inset-0 grid-field opacity-[0.5]" />
-      <div className="absolute inset-0 bg-[radial-gradient(120%_60%_at_50%_0%,rgba(22,255,0,0.22),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(120%_60%_at_50%_0%,rgba(255,70,122,0.22),transparent_60%)]" />
       {scatter.map((item, index) => {
         const style: CSSProperties & { "--float-rotate"?: string } = {
           top: `${item.top}%`,
@@ -85,7 +85,7 @@ export function ScatteredBackground() {
               alt=""
               width={item.width}
               height={item.height}
-              className="h-auto w-full drop-shadow-[0_12px_18px_rgba(15,98,146,0.45)]"
+              className="h-auto w-full drop-shadow-[0_12px_18px_rgba(23,0,46,0.45)]"
               priority={false}
             />
           </div>

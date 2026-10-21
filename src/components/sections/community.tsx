@@ -78,12 +78,12 @@ export function Community() {
                 ) : (
                   <div
                     className={cn(
-                      "flex items-center justify-between gap-4 border-2 border-ice/20 bg-sky p-4 sm:p-5",
+                      "flex items-center justify-between gap-4 border-2 border-paper/15 bg-sky p-4 sm:p-5",
                       isSoon && "opacity-85",
                     )}
                   >
                     <span className="flex min-w-0 items-center gap-3">
-                      <span className="grid h-10 w-10 shrink-0 place-items-center border-2 border-ice/30 text-ice/70">
+                      <span className="grid h-10 w-10 shrink-0 place-items-center border-2 border-paper/30 text-paper/70">
                         {channel.id === "x" ? (
                           <svg
                             viewBox="0 0 24 24"

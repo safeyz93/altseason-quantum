@@ -193,7 +193,7 @@ export function GallerySection() {
           aria-label={`Sticker viewer: ${active.label}`}
           className="fixed inset-0 z-[80] flex items-center justify-center bg-ink/95 p-4 backdrop-blur-sm"
         >
-          <div className="relative flex w-full max-w-2xl flex-col border-2 border-ice/40 bg-ink shadow-[10px_10px_0_0_rgba(22,255,0,0.35)]">
+          <div className="relative flex w-full max-w-2xl flex-col border-2 border-ice/40 bg-ink shadow-[10px_10px_0_0_rgba(255,70,122,0.35)]">
             <div className="flex items-center justify-between gap-3 border-b-2 border-ice/25 px-4 py-3">
               <div className="min-w-0">
                 <p className="truncate font-display text-lg uppercase leading-none text-paper">
@@ -220,7 +220,7 @@ export function GallerySection() {
                 width={active.width}
                 height={active.height}
                 sizes="90vw"
-                className="h-auto max-h-[52vh] w-full max-w-[400px] object-contain drop-shadow-[0_16px_0_rgba(15,98,146,0.22)]"
+                className="h-auto max-h-[52vh] w-full max-w-[400px] object-contain drop-shadow-[0_16px_0_rgba(23,0,46,0.22)]"
               />
             </div>
 

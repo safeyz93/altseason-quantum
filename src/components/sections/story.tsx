@@ -11,7 +11,7 @@ export function Story() {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.16] [background-image:radial-gradient(#000000_1px,transparent_1px)] [background-size:26px_26px]"
+        className="pointer-events-none absolute inset-0 opacity-[0.16] [background-image:radial-gradient(#17002e_1px,transparent_1px)] [background-size:26px_26px]"
       />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
@@ -51,7 +51,7 @@ export function Story() {
                 width={backgroundStickers[3].width}
                 height={backgroundStickers[3].height}
                 sizes="(min-width: 1024px) 30vw, 80vw"
-                className="h-4/5 w-auto object-contain drop-shadow-[0_14px_0_rgba(15,98,146,0.18)]"
+                className="h-4/5 w-auto object-contain drop-shadow-[0_14px_0_rgba(23,0,46,0.18)]"
               />
             </div>
             <figcaption className="mt-3 flex items-center justify-between gap-2 border-t-2 border-ink pt-2 font-mono text-[10px] uppercase tracking-[0.14em]">

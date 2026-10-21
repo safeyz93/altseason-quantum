@@ -15,7 +15,7 @@ export function SiteHeader() {
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-display text-xl tracking-wide text-paper">$QZZ</span>
-            <span className="mt-0.5 hidden font-mono text-[9px] uppercase tracking-[0.24em] text-ice/70 sm:block">
+            <span className="mt-0.5 hidden font-mono text-[9px] uppercase tracking-[0.24em] text-paper/55 sm:block">
               Altseason Quantum
             </span>
           </span>
@@ -26,7 +26,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-paper/70 transition-colors hover:text-ice focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-ice"
+              className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-paper/70 transition-colors hover:text-neon focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-ice"
             >
               {link.label}
             </a>

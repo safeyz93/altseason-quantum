@@ -49,7 +49,7 @@ export function HowToBuy() {
               href="https://pump.fun"
               target="_blank"
               rel="noreferrer noopener"
-              className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-ice underline decoration-ice/40 decoration-2 underline-offset-4 transition-colors hover:text-paper hover:decoration-paper"
+              className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-neon underline decoration-neon/40 decoration-2 underline-offset-4 transition-colors hover:text-paper hover:decoration-paper"
             >
               Open pump.fun
               <span aria-hidden="true">↗</span>

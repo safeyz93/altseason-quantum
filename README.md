@@ -21,18 +21,18 @@ Everything sits in `src/lib/content.ts`:
 
 ## Design system
 
-Palette supplied by the user (`#000000`, `#0F6292`, `#16FF00`, `#FFED00`), mapped to roles in `src/app/globals.css` `@theme`:
+Palette supplied by the user (`#5003C0`, `#AB03A9`, `#FF467A`, `#FFD51E`), mapped to roles in `src/app/globals.css` `@theme`:
 
 | Token | Hex | Role |
 | --- | --- | --- |
-| `--color-abyss` | `#000000` | page background |
-| `--color-ink` | `#000000` | text on light, borders |
-| `--color-paper` | `#F4F8F2` | light text / card surface |
-| `--color-sky` | `#0F6292` | gallery tiles, stat cells, blue cards, hairline borders, hard shadows |
-| `--color-ice` | `#16FF00` | primary CTA, ticker band, live accents |
-| `--color-neon` | `#FFED00` | headline accent, active/soon badges |
+| `--color-abyss` | `#5003C0` | page background (royal purple) |
+| `--color-ink` | `#17002E` | text on light, borders, hard shadows (derived neutral) |
+| `--color-paper` | `#FFF4FA` | light text / card surface (derived neutral) |
+| `--color-sky` | `#AB03A9` | gallery tiles, stat cells, secondary cards, hairlines |
+| `--color-ice` | `#FF467A` | primary CTA, ticker band, live accents |
+| `--color-neon` | `#FFD51E` | headline accent, kickers, active/soon badges, CTA shadows |
 
-Hard shadows use `#0F6292` so they read on black; the active roadmap phase uses the green `--shadow-hard-ice`.
+Hard shadows use the deep plum `#17002E` so they read on purple; the active roadmap phase uses the yellow `--shadow-hard-ice`.
 
 Fonts: Anton (display), Space Grotesk (body), JetBrains Mono (data) via `next/font`.
 
