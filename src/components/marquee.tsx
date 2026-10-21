@@ -25,8 +25,9 @@ export function Marquee({
   return (
     <div
       aria-hidden="true"
+      data-marquee={tone}
       className={cn(
-        "relative overflow-hidden border-y-2 py-3",
+        "relative overflow-hidden border-y-2 py-9",
         tones[tone],
         className,
       )}
@@ -42,7 +43,7 @@ export function Marquee({
             {items.map((item, index) => (
               <span
                 key={`${copy}-${item}-${index}`}
-                className="flex shrink-0 items-center gap-5 pr-5 font-display text-lg uppercase tracking-[0.06em] sm:text-xl"
+                className="flex shrink-0 items-center gap-8 pr-8 font-display text-3xl uppercase leading-none tracking-[0.04em] sm:text-[2.5rem]"
               >
                 {item}
                 <CapsuleDot />
@@ -60,7 +61,7 @@ function CapsuleDot() {
     <svg
       aria-hidden="true"
       viewBox="0 0 24 24"
-      className="h-3.5 w-3.5 shrink-0"
+      className="h-6 w-6 shrink-0"
       fill="none"
     >
       <path

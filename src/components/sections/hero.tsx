@@ -16,8 +16,12 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(4,0,154,0.86)_0%,rgba(4,0,154,0.6)_42%,rgba(4,0,154,0.92)_100%)] lg:bg-[linear-gradient(90deg,rgba(4,0,154,0.96)_0%,rgba(4,0,154,0.88)_34%,rgba(4,0,154,0.25)_62%,rgba(4,0,154,0)_100%)]"
       />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-10">
-        <div className="relative z-10">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-10">
+        <div className="relative z-10 min-w-0">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-x-10 -inset-y-12 -z-10 bg-[radial-gradient(ellipse_at_left,rgba(4,0,154,1)_0%,rgba(4,0,154,0.98)_52%,rgba(4,0,154,0.88)_70%,rgba(4,0,154,0.45)_86%,rgba(4,0,154,0)_100%)] lg:-inset-x-24"
+          />
           <div className="flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 border-2 border-ice/50 px-2.5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-ice">
               <span className="inline-block h-1.5 w-1.5 bg-neon" />
@@ -79,44 +83,37 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[560px] lg:max-w-none">
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 grid place-items-center"
-          >
-            <div className="aspect-square w-[min(100%,520px)] rounded-full border-2 border-dashed border-ice/25 motion-reduce:animate-none lg:animate-[spin_60s_linear_infinite]" />
-          </div>
-
-          <div className="relative z-10 px-6 py-4 sm:px-10">
+        <div className="relative mx-auto w-full min-w-0 max-w-[560px] lg:max-w-none">
+          <div className="relative z-10 px-2 sm:px-6">
             <Image
               src={heroPill.src}
               alt={heroPill.alt}
               width={heroPill.width}
               height={heroPill.height}
               priority
-              sizes="(min-width: 1024px) 46vw, 86vw"
-              className="mx-auto h-auto w-full max-w-[500px] rotate-[16deg] drop-shadow-[0_28px_0_rgba(1,0,63,0.35)]"
+              sizes="(min-width: 1024px) 112vw, 94vw"
+              className="mx-auto h-auto w-full max-w-[520px] rotate-[16deg] drop-shadow-[0_32px_0_rgba(1,0,63,0.4)] sm:max-w-[640px] lg:w-[clamp(1200px,110vw,1600px)] lg:max-w-none lg:-translate-x-[42%] lg:rotate-[18deg]"
             />
 
-            <div className="absolute left-0 top-0 w-[26%] min-w-[72px] -rotate-12">
+            <div className="absolute -left-[8%] top-[-10%] w-[clamp(120px,42vw,310px)] -rotate-12 lg:left-0 lg:top-[2%] lg:w-[clamp(160px,26vw,310px)]">
               <Image
                 src={backgroundStickers[3].src}
                 alt={backgroundStickers[3].alt}
                 width={backgroundStickers[3].width}
                 height={backgroundStickers[3].height}
-                sizes="140px"
-                className="h-auto w-full drop-shadow-[0_10px_0_rgba(1,0,63,0.35)]"
+                sizes="310px"
+                className="h-auto w-full drop-shadow-[0_14px_0_rgba(1,0,63,0.35)]"
               />
             </div>
 
-            <div className="absolute -right-1 bottom-2 w-[22%] min-w-[64px] rotate-[10deg]">
+            <div className="absolute -right-[6%] bottom-[-8%] w-[clamp(110px,38vw,290px)] rotate-[10deg] lg:right-0 lg:bottom-[8%] lg:w-[clamp(150px,24vw,290px)]">
               <Image
                 src={backgroundStickers[0].src}
                 alt={backgroundStickers[0].alt}
                 width={backgroundStickers[0].width}
                 height={backgroundStickers[0].height}
-                sizes="120px"
-                className="h-auto w-full drop-shadow-[0_10px_0_rgba(1,0,63,0.35)]"
+                sizes="290px"
+                className="h-auto w-full drop-shadow-[0_14px_0_rgba(1,0,63,0.35)]"
               />
             </div>
           </div>
