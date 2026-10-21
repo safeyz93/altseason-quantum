@@ -76,11 +76,20 @@ export function VideoSplash() {
   return (
     <div
       ref={dialogRef}
+      id="splash"
       role="dialog"
       aria-modal="true"
       aria-labelledby="splash-title"
-      className="fixed inset-0 z-[70] flex flex-col justify-end overflow-hidden bg-ink"
+      data-splash-dismiss="anywhere"
+      onClick={dismiss}
+      className="fixed inset-0 z-[70] flex cursor-pointer flex-col justify-end overflow-hidden bg-ink"
     >
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html:
+            "<style>#splash{display:none!important}body{overflow:auto!important}</style>",
+        }}
+      />
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
@@ -124,6 +133,7 @@ export function VideoSplash() {
           <button
             ref={enterRef}
             type="button"
+            data-splash-dismiss="enter"
             onClick={dismiss}
             className="inline-flex items-center gap-2 border-2 border-ink bg-ice px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-ink shadow-[4px_4px_0_0_#ffed00] transition-transform duration-100 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-paper"
           >
@@ -132,6 +142,7 @@ export function VideoSplash() {
           </button>
           <button
             type="button"
+            data-splash-dismiss="skip"
             onClick={dismiss}
             className="inline-flex items-center border-2 border-ice/40 px-5 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.18em] text-ice transition-colors hover:border-ice hover:bg-ice hover:text-ink focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-paper"
           >
@@ -143,6 +154,34 @@ export function VideoSplash() {
           No audio · skip anytime · Esc to close
         </p>
       </div>
+
+      {/* Progressive-enhancement fallback: the splash must always be dismissible,
+          even if the React bundle fails to load or hydrate (stale cache, offline chunk). */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function(){
+  if (window.__qzzSplashFallback) return;
+  window.__qzzSplashFallback = true;
+  function hide(){
+    var el = document.getElementById("splash");
+    if (!el) return;
+    el.style.display = "none";
+    el.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+  }
+  document.addEventListener("click", function(event){
+    var target = event.target;
+    if (target && target.closest && target.closest("[data-splash-dismiss]")) hide();
+  }, true);
+  document.addEventListener("keydown", function(event){
+    if (event.key === "Escape" || event.key === "Enter") hide();
+  }, true);
+  window.addEventListener("hashchange", hide);
+  if (location.hash === "#main-content" || location.hash === "#top" || location.hash === "#entered") hide();
+})();`,
+        }}
+      />
     </div>
   );
 }
