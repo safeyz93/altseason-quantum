@@ -76,9 +76,7 @@ export function Hero() {
 
           <p className="mt-3 font-mono text-[10px] leading-relaxed text-paper/50">
             * {demoNote} Contract:{" "}
-            <span className="text-paper/85">
-              {token.contract.slice(0, 6)}…{token.contract.slice(-4)}
-            </span>{" "}
+            <span className="text-paper/85">{token.contract}</span>{" "}
             on {token.chain}.
           </p>
         </div>

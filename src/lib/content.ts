@@ -3,7 +3,7 @@ export const token = {
   ticker: "QZZ",
   chain: "Solana",
   launchpad: "pump.fun",
-  contract: "DnEkiNhstiwfMaqFUHi4bAbSwPNHk28hTLUZGYw2pump",
+  contract: "SOON",
   supply: "1,000,000,000",
   year: 2026,
   socials: {
@@ -185,7 +185,7 @@ export const community = {
     {
       id: "contract",
       label: "Contract",
-      handle: "DnEk…2pump",
+      handle: "SOON",
       href: null,
       note: "Solana · verify before every trade",
       state: "copy" as const,

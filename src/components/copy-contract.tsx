@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { token } from "@/lib/content";
 
@@ -9,46 +6,9 @@ type CopyContractProps = {
   className?: string;
 };
 
-async function copyText(value: string) {
-  try {
-    await navigator.clipboard.writeText(value);
-    return true;
-  } catch {
-    try {
-      const area = document.createElement("textarea");
-      area.value = value;
-      area.setAttribute("readonly", "");
-      area.style.position = "absolute";
-      area.style.left = "-9999px";
-      document.body.appendChild(area);
-      area.select();
-      const ok = document.execCommand("copy");
-      document.body.removeChild(area);
-      return ok;
-    } catch {
-      return false;
-    }
-  }
-}
+const pendingTitle = "Contract address coming soon";
 
 export function CopyContract({ variant = "compact", className }: CopyContractProps) {
-  const [copied, setCopied] = useState(false);
-  const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    return () => {
-      if (timeout.current) clearTimeout(timeout.current);
-    };
-  }, []);
-
-  async function handleCopy() {
-    const ok = await copyText(token.contract);
-    if (!ok) return;
-    setCopied(true);
-    if (timeout.current) clearTimeout(timeout.current);
-    timeout.current = setTimeout(() => setCopied(false), 2200);
-  }
-
   if (variant === "block") {
     return (
       <div
@@ -67,14 +27,12 @@ export function CopyContract({ variant = "compact", className }: CopyContractPro
         </div>
         <button
           type="button"
-          onClick={handleCopy}
-          className="shrink-0 border-2 border-ice bg-ice px-4 py-2.5 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-ink transition-colors hover:bg-neon focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-paper"
+          aria-disabled="true"
+          title={pendingTitle}
+          className="shrink-0 cursor-not-allowed border-2 border-ice/40 px-4 py-2.5 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-ice/70"
         >
-          {copied ? "Copied" : "Copy"}
+          Soon
         </button>
-        <span className="sr-only" aria-live="polite">
-          {copied ? "Contract address copied to clipboard" : ""}
-        </span>
       </div>
     );
   }
@@ -83,17 +41,15 @@ export function CopyContract({ variant = "compact", className }: CopyContractPro
     return (
       <button
         type="button"
-        onClick={handleCopy}
+        aria-disabled="true"
+        title={pendingTitle}
         className={cn(
-          "inline-flex items-center justify-center gap-2 border-2 border-ink bg-paper px-5 py-3 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-ink shadow-[3px_3px_0_0_#ab03a9] transition-[transform,box-shadow] duration-100 hover:-translate-y-0.5 hover:shadow-hard active:translate-y-1 active:shadow-none",
+          "inline-flex cursor-not-allowed items-center justify-center gap-2 border-2 border-ink bg-paper px-5 py-3 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-ink/60 shadow-[3px_3px_0_0_#ab03a9]",
           className,
         )}
       >
         <CapsuleIcon />
-        {copied ? "Contract copied" : "Copy contract"}
-        <span className="sr-only" aria-live="polite">
-          {copied ? "Contract address copied to clipboard" : ""}
-        </span>
+        Soon
       </button>
     );
   }
@@ -101,18 +57,15 @@ export function CopyContract({ variant = "compact", className }: CopyContractPro
   return (
     <button
       type="button"
-      onClick={handleCopy}
-      title={copied ? "Contract copied" : "Copy contract address"}
+      aria-disabled="true"
+      title={pendingTitle}
       className={cn(
-        "inline-flex items-center gap-2 border-2 border-neon/50 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-neon transition-colors hover:border-neon hover:bg-neon hover:text-ink",
+        "inline-flex cursor-not-allowed items-center gap-2 border-2 border-paper/30 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-paper/70",
         className,
       )}
     >
       <CapsuleIcon className="h-3.5 w-3.5" />
-      {copied ? "Copied" : "Copy CA"}
-      <span className="sr-only" aria-live="polite">
-        {copied ? "Contract address copied to clipboard" : ""}
-      </span>
+      Soon
     </button>
   );
 }

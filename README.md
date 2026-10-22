@@ -14,7 +14,7 @@ npm run build && npm start
 
 Everything sits in `src/lib/content.ts`:
 
-- `token.contract` — Solana contract address (currently `DnEkiNhstiwfMaqFUHi4bAbSwPNHk28hTLUZGYw2pump`)
+- `token.contract` — placeholder `SOON` for now (real SPL address not published yet). Copy buttons are intentionally inert until the address is live.
 - `token.socials.telegram` — `https://t.me/altseasonqzz`
 - `token.socials.x` — **currently `null`**, so X/Twitter renders as a "Soon" card. Once the link exists, set it to the URL and the Community + Footer sections will show it as live (the Community section checks `.state`, so also flip that channel's `state` from `"soon"` to `"live"` and give it an `href`).
 - `demoNote` — the illustrative-data disclaimer shown in Hero, Community, and Footer.

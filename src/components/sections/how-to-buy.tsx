@@ -77,7 +77,7 @@ export function HowToBuy() {
         </div>
 
         <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.18em] text-paper/45">
-          Contract {token.contract.slice(0, 8)}…{token.contract.slice(-6)} ·{" "}
+          Contract {token.contract} ·{" "}
           {token.chain} · {token.launchpad}
         </p>
       </div>
